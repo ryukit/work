@@ -1,0 +1,16 @@
+{
+  "name": "family-traditions",
+  "version": "1.0.0",
+  "authors": [
+    "ryukit <ryukit.rk@gmail.com>"
+  ],
+  "description": "new project for IT-DEVGROUP",
+  "main": "main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation"
+  }
+}

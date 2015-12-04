@@ -1,0 +1,40 @@
+//buttons
+.btn{
+	display: inline-block;
+	width: 200px; 
+	height: 44px;
+	text-align: center;
+	font-size: em-calc(14);
+	line-height: (18/14)*1em;
+	padding: 13px 0; 
+	color: $btn-color;
+	background-color: $btn-background;
+	@include border-radius(2px);
+}
+.btn-1{color: $btn1-color;background-color: $btn1-background; border: $btn1-border;}
+.btn-1:hover{color: $btn1-hover-color;background-color: $btn1-hover-background;}
+.btn-2{
+	width: 170px;
+	text-transform: uppercase;
+	height: 46px;
+	padding: 10px 0;
+	font-size: em-calc(18);
+	line-height: (20/18)*1em;
+	color: $btn2-color;
+	background-color: $btn2-background;
+	border: $btn2-border;
+}
+.btn-2:hover{
+	border: $btn2-hover-border;
+	color: $btn2-hover-color;
+}
+.btn-3{
+	border: $btn3-border;
+	color: $btn3-color;
+	background-color: $btn3-background;
+}
+.btn-3:hover{
+	border: $btn3-hover-border;
+	color: $btn3-hover-color;
+	background-color: $btn3-hover-background;
+}

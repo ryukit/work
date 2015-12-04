@@ -1,0 +1,145 @@
+//reset styles by IT-DEVGROUP
+@import "reset";
+
+//variables used in project
+@import "variables";
+
+/*==========FOUNDATION GRID==========*/
+
+//foundation framework grid component
+@import "foundation/components/grid";
+
+/*==========END==========*/
+
+//fonts 
+@import "fonts";
+.s1{font-family: "#{$regular-font}";}
+.s2{font-family: "#{$bold-font}";}
+.s3{font-family: "#{$ext-font}";}
+.s4{font-family: "#{$light-font}";}
+.s5{font-family: "#{$f-bold}";}
+.s6{font-family: "#{$f-bold-italic}";}
+.s7{font-family: "#{$f-italic}";}
+.s8{font-family: "#{$f-light}";}
+.s9{font-family: "#{$f-reg}";}
+.s10{font-family: "#{$f-medium}";}
+.s11{font-family: "#{$f-semi-bold}";}
+
+
+/*==========MAIN PARAMS==========*/
+body{
+	font-family: "#{$f-reg}";
+	color: $base-font-color;
+	background-color: $body-bg-color;
+	line-height: $base-line-height;
+}
+html,body {
+    height: auto;
+    width: auto;
+}
+.wrapper{
+	width: auto;
+	padding-left: 180px;
+}
+div, a, ul, li{
+	@include box-sizing(border-box);
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+}
+
+img{
+	@include responsiveimg;
+}
+
+a, .btn{
+	@include transition(all, 0.3s, ease, 0s);
+}
+em{
+
+}
+strong{font-family: "#{$f-bold}";}
+
+//header
+@import "slider";
+
+//icon font
+@import "app/icons";
+
+//left aside panel
+@import "app/aside-panel";
+
+//text params
+@import "app/text-style";
+
+//buttons
+@import "app/buttons";
+
+//preloader style
+@import "app/preloader";
+
+//parallax slider styles
+@import "app/parallax-slider";
+
+//when page styles
+@import "app/when-style";
+
+//where page styles
+@import "app/where-style";
+
+//sea page styles
+@import "app/sea-style";
+
+//about page styles
+@import "app/about-style";
+
+//error page styles
+@import "app/error-style";
+
+//popup styles
+@import "app/popup";
+
+//popup styles
+@import "app/contacts-style";
+
+/*==========CLEAR==========*/
+body, 
+header,
+.chose-yours,
+.contacts-list
+{
+	@include clearfix;
+}
+
+.both{clear: both;}
+.gm-style-iw{display: none;}
+
+/*==========COMMON PARAM's==========*/
+.table{
+	display: inline-table;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.table-cell{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.hide{display: none;}
+.hidden{visibility: hidden; opacity: 0;}
+
+#width-sizer{
+	display: block;
+	width: 100%;
+	height: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+/*==========RESPONSIVE==========*/
+@import "responsive.scss";

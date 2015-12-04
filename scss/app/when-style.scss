@@ -1,0 +1,30 @@
+//when-page
+
+.where-togo{
+	.img-holder{
+		width: 100%;
+		height: 340px;
+		background-position: 50% 50%;
+		background-attachment: fixed;
+		background-size: cover;
+		overflow: hidden;
+		margin-bottom: 30px;
+	}
+	a{display: inline-block;}
+	>div{margin-bottom: 50px;}
+	>div:last-child{margin-bottom: 0;}
+}
+.country-slogan{
+	font-size: em-calc(18);
+	line-height: (30/18)*1em;
+	color: #05b59d;
+	font-family: "#{$f-italic}";
+	margin-bottom: 20px;
+}
+.country-text{
+	font-size: em-calc(18);
+	line-height: (30/18)*1em;
+	color: #5d5d5d;
+	font-family: "#{$f-light}";
+	margin-bottom: 20px;
+}

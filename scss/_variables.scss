@@ -1,0 +1,201 @@
+//VARIABLES
+@import 'foundation/functions';
+$include-html-classes: true;
+$include-html-global-classes: $include-html-classes;
+
+//new width variables
+$row-width: rem-calc(1200) !default; //container width
+$base-font-size: 16px;
+$base-line-height: 1em !default; //default body line-height
+$column-gutter: rem-calc(30); //column left-right paddings
+
+
+//responsive breakpoints
+$xsmall-breakpoint:  em-calc(480)  !default;
+$small-breakpoint:  em-calc(680)  !default;
+$medium-breakpoint: em-calc(980) !default;
+$large-breakpoint:  em-calc(1250) !default;
+$xlarge-breakpoint: em-calc(1600) !default;
+
+
+//----------FONTS
+$regular-font: pnreg;
+$bold-font: pnbld;
+$ext-font: pnext;
+$light-font: pnlgh;
+
+$f-bold: fira_sansbold;
+$f-bold-italic: fira_sansbold_italic;
+$f-italic: fira_sansitalic;
+$f-light: fira_sanslight;
+$f-medium: fira_sansmedium;
+$f-reg: fira_sansregular;
+$f-semi-bold: fira_sanssemibold;
+
+//----------Z-INDEX
+$header-zindex: 500;
+
+
+//----------BASE
+$base-font-color: #000000;
+$body-bg-color: #ffffff;
+
+//----------HEADER
+$header-bg-color: #ffffff;
+$logo-color: #e14c41;
+$slogan-color: #3d3d3d;
+$slogan-opacity: 0.6;
+$header-border-color: #bcbcbc;
+
+
+$dark-gray: #333333;
+$simple-grey: #323232;
+$white: #ffffff;
+$black: #000000;
+$base-font: #333333;  //base font color
+$very-light-gray: #f0f0f0;
+$light-gray: #e6e6e6;
+$pol-grey: #e9e9e9;
+$semi-grey: #d7d7d7;
+$strong-blue: #019dd7;
+$gr-6: #e6e6e6;
+$grey: #b0b0b0;
+$important-red: #e91a41;
+
+$text-color : #242a36;
+$grayish-blue: #242a36;
+$footer-bg: #242a36;
+$bq-color: #8b8b8b;
+$aside-border: #b0b0b0;
+$currency-bg: #ffffff;
+$currency-li-bg: #f0f0f0;
+$currency-info: #afafaf;
+$curr-hover: #d2d2d2;
+
+//----pagination
+$pagination-color: #909090;
+$pagination-hover: #343434;
+
+//----checkbox
+$check-border: #dedede;
+$check-bg: #ffffff;
+$checked-bg: #dedede;
+
+//----input
+$input-text-background: #fff;
+$input-text-color: #cad3d4;
+$input-text-border: 1px solid #cad3d4;
+$msg-error: #e14c41;
+$msg-success: #83b33f;
+
+$btn-color: #000;
+$btn-background: #eee;
+
+$btn1-color: #fff;
+$btn1-background: transparent;
+$btn1-hover-color: #3d3d3d;
+$btn1-hover-background: #d3dbdc;
+$btn1-border: 1px solid rgba(255, 255, 255, 0.5);
+
+$btn2-color: #2f2f2f;
+$btn2-background: transparent;
+$btn2-border: 3px solid #2f2f2f;
+$btn2-hover-color: #05b59d;
+$btn2-hover-border: 3px solid #05b59d;
+
+$btn3-color: #2f2f2f;
+$btn3-background: transparent;
+$btn3-border: 1px solid #979797;
+$btn3-hover-color: #fff;
+$btn3-hover-border: 1px solid #7cccbf;
+$btn3-hover-background: #7cccbf;
+
+//------aside panel
+$aside-background: #2f2f2f;
+
+
+//----login mode
+$log-border: #cad3d4;
+
+
+
+
+//----------MIXINS
+
+	//----------responsive-for-images
+		@mixin responsiveimg {
+			max-width: 100%;
+		 	height: auto;
+		 	width: auto\9;
+		}
+
+	//----------font-face
+		@mixin font-face($name, $font-files, $eot: false, $weight: false, $style: false) {
+		  	$iefont: unquote("#{$eot}?#iefix");
+		  	@font-face {
+		    font-family: quote($name);
+		    @if $eot {
+		      src: font-url($eot);
+		      $font-files: font-url($iefont) unquote("format('embedded-opentype')"), $font-files;
+		    }
+		    src: $font-files;
+		    @if $weight {
+		      font-weight: $weight;
+		    }
+		    @if $style {
+		      font-style: $style;
+		    }
+		  }
+		}
+
+	//----------clear
+		@mixin clearfix{
+			&:after {
+				content: " ";
+				display: block;
+				height: 0;
+				clear: both;
+				overflow: hidden;
+				visibility: hidden;
+			}
+		}
+
+	//----------box-sizing !!!example == @include box-sizing(content-box | border-box | padding-box | inherit)!!!
+		@mixin box-sizing($type){
+			-webkit-box-sizing: ($type); //----Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x
+			-moz-box-sizing: ($type); //----Firefox 1 - 28
+			box-sizing: ($type); //----Safari 5.1+, Chrome 10+, Firefox 29+, Opera 7+, IE 8+, Android 4.0+, iOS any
+		}
+
+	//----------border-radius !!!example == @include border-radius(20px | 1.5em | 50%)!!!
+		@mixin border-radius($radius) {
+			-webkit-border-radius: $radius; /* Safari, Chrome, iOS */
+			-moz-border-radius: $radius; /* Firefox */
+			-ms-border-radius: $radius; /* IE */
+			border-radius: $radius;
+		}
+
+	//---------- transition !!!example == @include  transition(none | all | <parameter>, 0.3s, ease|ease-in|ease-out|ease-in-out|linear|step-start|step-end|steps|cubic-bezier, 0s)!!!
+		@mixin transition($property, $duration, $timing-function, $delay){
+			-webkit-transition: ($property $duration $timing-function $delay); //----Safari, Chrome, iOS
+			-moz-transition: ($property $duration $timing-function $delay); //----Firefox
+			-o-transition: ($property $duration $timing-function $delay); //----Opera
+			transition: ($property $duration $timing-function $delay);
+		}
+
+	//---------- rotate !!!example == @include  rotate(15deg)!!!
+		@mixin rotate($angle){
+			-moz-transform: rotate($angle); //----Firefox
+		    -ms-transform: rotate($angle); //----IE
+		    -webkit-transform: rotate($angle); //----Safari, Chrome, iOS
+		    -o-transform: rotate($angle); //----Opera
+		    transform: rotate($angle);
+		}
+		
+		@mixin special-transform($x-coord, $y-coord, $angle){
+			-webkit-transform: translateX($x-coord) translateY($y-coord) rotate($angle);
+			-moz-transform: translateX($x-coord) translateY($y-coord) rotate($angle);
+			-ms-transform: translateX($x-coord) translateY($y-coord) rotate($angle);
+			-o-transform: translateX($x-coord) translateY($y-coord) rotate($angle);
+			transform: translateX($x-coord) translateY($y-coord) rotate($angle);
+		}

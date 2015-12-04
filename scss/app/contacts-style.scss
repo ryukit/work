@@ -1,0 +1,62 @@
+//contacts page
+
+.contacts-list{
+	>div{
+		margin-bottom: 30px;
+		>div{
+			border: 3px solid #d7d7d7;
+			padding: 15px 10px;
+			text-align: center;
+		}
+		.list-title{
+			font-size: em-calc(18);
+			line-height: (20/18)*1em;
+			color: #5d5d5d;
+			font-family: "#{$f-bold}";
+			margin-bottom: 15px;
+		}
+		.contact-block{
+			height: 50px;
+			overflow: hidden;
+			font-size: em-calc(14);
+			line-height: (24/14)*1em;
+			color: #2f2f2f; 
+		}
+	}
+}
+.our-team{
+	.img-holder{text-align: center; height: 180px; overflow: hidden;}
+	.team-mate{
+		text-align: center;
+		padding: 20px 10px 20px 10px;
+		margin-bottom: 10px;
+		height: 100%;
+		// max-height: 180px;
+		// overflow: hidden;
+		.name{
+			font-size: em-calc(18);
+			line-height: (24/18)*1em;
+			font-family: "#{$f-bold}";
+			margin-bottom: 10px;
+			color: #2f2f2f;
+			height: 46px; 
+			overflow: hidden;
+			display: block;
+		}
+		.status{
+			font-size: em-calc(14);
+			line-height: (24/14)*1em;
+			color: #959595;
+			height: 24px; 
+			overflow: hidden;
+			display: block;
+		}
+		ul{
+			font-size: em-calc(14);
+			line-height: (24/14)*1em;
+			color: #2f2f2f;
+			height: 120px;
+			overflow: hidden;
+		}
+	}
+}

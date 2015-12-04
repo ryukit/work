@@ -1,0 +1,17 @@
+//parallax slider
+
+/*-----------------------*/
+.parall-bg{
+	background-attachment: fixed;
+    background-position: 50% 0;
+    background-size: cover;
+}
+.wall-slider{
+	width: 100%;
+	margin-bottom: 40px;
+	height: 670px;
+	overflow: hidden;
+	.slick-slide{
+		opacity: 0 !important;
+	}
+}

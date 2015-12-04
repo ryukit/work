@@ -1,0 +1,20 @@
+//preloader
+#page-preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #eee;
+    z-index: 100500;
+}
+
+#page-preloader .spinner {
+    width:128px;
+    height:128px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url('../img/loading-cafe.gif') no-repeat 50% 50%;
+    margin: -64px 0 0 -64px;
+}

@@ -1,0 +1,69 @@
+//sea-page
+
+.main-full{position: relative;}
+.full-page-slider{
+	.slick-slide{
+		background-position: 50% 50%;
+		background-size: cover;
+		outline: none;
+	}
+	.slick-dots{
+		position: absolute; 
+		z-index: 200;
+		bottom: 30px;
+		display: block;
+		text-align: center;
+		width: 100%;
+		li{
+			display: inline-block;
+			vertical-align: middle;
+			button{
+				display: block;
+				width: 32px;
+				height: 32px;
+				background-color: transparent;
+				color: transparent;
+				font-size: 0;
+				&:before{
+					display: block;
+					content: "";
+					width: 12px; 
+					height: 12px;
+					margin: 10px;
+					@include border-radius(100%);
+					border: 1px solid #fff;
+					background-color: transparent;
+				}
+			}
+		}
+		li.slick-active{
+			button:before{
+				background-color: #fff;
+			}
+		}
+	}
+}
+.text-wrapper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 199;
+	width: 100%;
+	.table{
+		width: 100%;
+		height: 100%;
+		text-align: left;
+		background-color: rgba(57,57,57,0.6);
+		.table-cell{
+			>div{
+				margin: 0 auto;
+				max-width: 75rem;
+				width: 100%;
+				padding-left: 0.9375rem;
+	    		padding-right: 0.9375rem;
+	    		h1{color: #fff;}
+	    		p{color: #fff;}
+			}
+		}
+	}
+}

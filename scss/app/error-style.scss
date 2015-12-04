@@ -1,0 +1,31 @@
+//error-page
+
+.error-wrap{
+	width: 100%;
+	padding-left: 180px;
+}
+.error-type{
+	font-size: em-calc(300);
+	line-height: 220px;
+	color: #05b59d;
+	margin-bottom: 30px;
+	font-family: "#{$f-light}";
+	span, img{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	img{height: 100%; max-height: 210px; max-width: 210px;}
+}
+.error-descr{
+	font-size: em-calc(36);
+	line-height: (48/36)*1em;
+	color: #05b59d;
+	font-family: "#{$f-light}";
+	text-align: center;
+	margin-bottom: 20px;
+}
+.error-page.btn{
+	display: block;
+	margin: 0 auto;
+}
+.full-error{padding-left: 0;}
